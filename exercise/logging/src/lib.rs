@@ -32,7 +32,7 @@ impl Frog {
     pub fn sleep(&mut self) {
         if self.sleeping {
             // 5. Use error!() to log a (non-fatal) error stating that the Frog is already asleep
-            error!("non-fatal error, the fros is already sleep")
+            error!("non-fatal error, the frog is already sleep")
         } else {
             self.sleeping = true;
         }
@@ -42,10 +42,12 @@ impl Frog {
 impl Default for Frog {
     fn default() -> Self {
         // 6. Use trace!() to log that a default value was generated, with the debug representation
-        trace!("default value generated for the frog");
-        Frog {
+
+        let frog = Frog {
             energy: 5,
             sleeping: false,
-        }
+        };
+        trace!("default frog value was generated: {:?}", frog);
+        frog
     }
 }

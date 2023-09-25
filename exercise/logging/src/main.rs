@@ -1,6 +1,5 @@
 // START IN lib.rs!!!
 
-use env_logger;
 use frogger::Frog;
 // You did #1-#6 in lib.rs already, right?
 //
